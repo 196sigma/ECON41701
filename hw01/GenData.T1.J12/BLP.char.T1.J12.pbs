@@ -1,0 +1,28 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=1,walltime=04:00:00
+#PBS -q short
+#PBS -t 0-99
+#PBS -m n
+
+# Ensure that GFORTRAN output occurs as written instead of all C/C++ followed by
+# FORTRAN
+export GFORTRAN_UNBUFFERED_ALL='y'
+
+ix=${PBS_ARRAYID}
+
+T=1
+J=12
+
+for inFile in /gpfs/pads/projects/CI-SES000069/data/blp/arm.T${T}.J${J}/rep${ix}/config/DFS.Char.*
+do
+  echo
+  echo '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
+  echo '====>>>> BLP - solving with start =' $ix
+  echo '         Using Char instruments'
+  echo "         T = ${T}, J = ${J} "
+  echo "         Config :" ${inFile}
+  echo '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'
+  echo
+  /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/src/blpDriver -f ${inFile}
+done
+

@@ -1,0 +1,1137 @@
+----------------------------------------
+Begin PBS Prologue Tue Jun  7 23:00:54 CDT 2011
+Job ID:		1377331[51].svc.pads.ci.uchicago.edu
+Username:	bss
+Group:		ci-users
+Nodes:		c34.pads.ci.uchicago.edu,c07.pads.ci.uchicago.edu
+End PBS Prologue Tue Jun  7 23:00:54 CDT 2011
+----------------------------------------
+fort.15 tmp
+fort.15 tmp Generating Data for T = 1, J = 12
+fort.15 tmp Start : 51
+fort.15 tmp
+
+============================================================
+  Initializing GenData Software to create synthetic BLP data.
+
+============================================================
+
+initListConfig ===> Configuration of Property file: /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/PADS.ARM.GenData.T1.J12.prop
+
+	Base.Dir : /gpfs/pads/projects/CI-SES000069/data/blp
+	Base.Name : arm
+	File.Gamma : /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/Gamma.csv
+	File.Mean.Beta : /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/MeanBeta.csv
+	File.Mean.Char : /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/MeanChar.csv
+	File.Mean.Cost : /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/MeanCost.csv
+	File.Quadrature : /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/quad/SGIRule.3-6.csv
+	File.Var.Beta : /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/VarBeta.csv
+	File.Var.Char : /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/VarChar.csv
+	File.Var.Cost : /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/VarCost.csv
+	File.Var.Shocks : /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/VarShocks.csv
+	J : 12
+	J.max : 1000
+	K : 1
+	Seed : 677174
+	T : 1
+	T.max : 1000
+	nProd.Per.Firm : 2
+	nQuadNodes : 165
+	nReps : 1
+	nStarts : 15
+	nX : 3
+	nZ : 1
+
+
+initListParams ===> Parameters specified for this run:
+
+Beta:
+3
+2
+-5
+
+Var[ Beta ]:
+1 0 0
+0 1 0
+0 0 1
+
+Mean[ X_jt ]:
+-2
+
+Var[ X_jt ]:
+6
+
+Gamma:
+0
+0.5
+0.5
+
+Mean[ Z_jt ]:
+0
+
+Var[ Z_jt ]:
+0.4
+
+Var[ Shocks ]:
+  2 0.1
+0.1   2
+
+
+initIsValid ===> checking data...
+
+Max Marginal Cost : 1.44646 <> Min Marginal Cost : 0.319902
+simIsValid ===> checking data...
+
+Solving for equilibrium price...
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  3.8885e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  3.4891e+00 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  4.6472e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  5.4379e+00 eqn: (f[   11])
+Minimum Row Norm. . . . . . . .  1.3091e+00 eqn: (f[   10])
+Maximum Column Norm . . . . . .  5.9285e+00 var: (x[   12])
+Minimum Column Norm . . . . . .  1.6652e-01 var: (x[    2])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             7.1763e+00             0.0e+00 (f[   10])
+    1     6     0    12 7.1140e+00  1.7e-01    0.0e+00 (f[    2])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     7     2 7.1140e+00           I 0.0e+00 5.2e+00 (f[    2])
+    1     1     8     3 2.0191e+00  1.0e+00 SM 0.0e+00 1.8e+00 (f[    2])
+    2     1     9     4 4.4009e+00  1.0e+00 SO 0.0e+00 4.0e+00 (f[    9])
+    3     1    10     5 3.2139e-01  1.0e+00 SO 0.0e+00 2.7e-01 (f[    9])
+    4     1    11     6 2.0312e-02  1.0e+00 SO 0.0e+00 1.7e-02 (f[    9])
+    5     1    12     7 9.7958e-06  1.0e+00 SO 0.0e+00 8.2e-06 (f[    9])
+    6     1    13     8 3.1617e-12  1.0e+00 SO 0.0e+00 2.2e-12 (f[    9])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  2.0558e-12 eqn: (f[    9])
+Inf-Norm of Normal Map. . . . .  2.1516e-12 eqn: (f[    9])
+Inf-Norm of Minimum Map . . . .  2.1516e-12 eqn: (f[    9])
+Inf-Norm of Fischer Function. .  2.1516e-12 eqn: (f[    9])
+Inf-Norm of Grad Fischer Fcn. .  9.5293e-12 eqn: (f[    9])
+Two-Norm of Grad Fischer Fcn. .  1.2914e-11
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7306e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  2.1516e-12 eqn: (f[    9])
+Maximum of Grad F . . . . . . .  4.6417e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 6
+Minor Iterations. . . . 6
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 13
+Gradient Evaluations. . 8
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.494925
+Residual. . . . . . . . 3.161692e-12
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.9668e+00 var: (x[    5])
+Maximum of F. . . . . . . . . .  2.4415e+00 eqn: (f[    5])
+Maximum of Grad F . . . . . . .  4.6035e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  5.5169e+00 eqn: (f[    8])
+Minimum Row Norm. . . . . . . .  2.8706e+00 eqn: (f[    5])
+Maximum Column Norm . . . . . .  5.4758e+00 var: (x[    9])
+Minimum Column Norm . . . . . .  2.7211e+00 var: (x[    5])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             4.5437e+00             0.0e+00 (f[    5])
+    1     1     0    12 5.0188e-01  1.0e+00    0.0e+00 (f[    5])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 5.0188e-01           I 0.0e+00 4.7e-01 (f[    5])
+    1     1     3     3 2.4833e-02  1.0e+00 SO 0.0e+00 2.4e-02 (f[    6])
+    2     1     4     4 2.7977e-05  1.0e+00 SO 0.0e+00 2.8e-05 (f[    6])
+    3     1     5     5 4.1331e-11  1.0e+00 SO 0.0e+00 4.1e-11 (f[    6])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  4.3908e-11 eqn: (f[    6])
+Inf-Norm of Normal Map. . . . .  4.1276e-11 eqn: (f[    6])
+Inf-Norm of Minimum Map . . . .  4.1276e-11 eqn: (f[    6])
+Inf-Norm of Fischer Function. .  4.1276e-11 eqn: (f[    6])
+Inf-Norm of Grad Fischer Fcn. .  1.6797e-10 eqn: (f[    6])
+Two-Norm of Grad Fischer Fcn. .  1.6823e-10
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7306e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  4.1276e-11 eqn: (f[    6])
+Maximum of Grad F . . . . . . .  4.6417e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 3
+Minor Iterations. . . . 3
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 5
+Gradient Evaluations. . 5
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.367944
+Residual. . . . . . . . 4.133109e-11
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  5.3236e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  3.9625e+00 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  4.5088e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  5.2784e+00 eqn: (f[   11])
+Minimum Row Norm. . . . . . . .  7.5816e-01 eqn: (f[    2])
+Maximum Column Norm . . . . . .  7.1761e+00 var: (x[   12])
+Minimum Column Norm . . . . . .  6.4335e-02 var: (x[    2])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             1.0921e+01             0.0e+00 (f[    3])
+    1     8     0    12 1.0916e+01  2.8e-02    0.0e+00 (f[    3])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     9     2 1.0916e+01           I 0.0e+00 5.7e+00 (f[    3])
+    1     3    10     3 0.0000e+00  1.0e+00 SM 0.0e+00 0.0e+00 (f[    1])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Normal Map. . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Minimum Map . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Fischer Function. .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Grad Fischer Fcn. .  0.0000e+00 eqn: (f[    1])
+Two-Norm of Grad Fischer Fcn. .  0.0000e+00
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.0305e+02 var: (x[    3])
+Maximum of F. . . . . . . . . .  8.2167e+01 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  5.3742e+00 eqn: (f[    1])
+                                            var: (x[    2])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 1
+Minor Iterations. . . . 24
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 10
+Gradient Evaluations. . 3
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.291955
+Residual. . . . . . . . 0.000000e+00
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  2.7751e+00 var: (x[   10])
+Maximum of F. . . . . . . . . .  2.9134e+00 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  4.2774e+00 eqn: (f[    7])
+                                            var: (x[    7])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  4.9997e+00 eqn: (f[    7])
+Minimum Row Norm. . . . . . . .  2.1868e+00 eqn: (f[   10])
+Maximum Column Norm . . . . . .  5.6690e+00 var: (x[   12])
+Minimum Column Norm . . . . . .  1.5392e+00 var: (x[   10])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             6.8070e+00             0.0e+00 (f[   10])
+    1     1     0    12 1.0492e+00  1.0e+00    0.0e+00 (f[   10])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 1.0492e+00           I 0.0e+00 6.3e-01 (f[   10])
+    1     1     3     3 8.0235e-01  1.0e+00 SO 0.0e+00 8.0e-01 (f[    9])
+    2     1     4     4 1.0541e-02  1.0e+00 SO 0.0e+00 8.6e-03 (f[   10])
+    3     1     5     5 4.2802e-06  1.0e+00 SO 0.0e+00 4.1e-06 (f[   10])
+    4     1     6     6 1.1284e-12  1.0e+00 SO 0.0e+00 1.1e-12 (f[   10])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  1.6289e-12 eqn: (f[   10])
+Inf-Norm of Normal Map. . . . .  1.1274e-12 eqn: (f[   10])
+Inf-Norm of Minimum Map . . . .  1.1273e-12 eqn: (f[   10])
+Inf-Norm of Fischer Function. .  1.1274e-12 eqn: (f[   10])
+Inf-Norm of Grad Fischer Fcn. .  4.0769e-12 eqn: (f[   10])
+Two-Norm of Grad Fischer Fcn. .  4.0889e-12
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7306e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  1.1274e-12 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  4.6417e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 4
+Minor Iterations. . . . 4
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 6
+Gradient Evaluations. . 6
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.408938
+Residual. . . . . . . . 1.128408e-12
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  4.9971e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  3.9887e+00 eqn: (f[    6])
+Maximum of Grad F . . . . . . .  4.1017e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  4.4693e+00 eqn: (f[   11])
+Minimum Row Norm. . . . . . . .  1.1642e+00 eqn: (f[    2])
+Maximum Column Norm . . . . . .  6.7209e+00 var: (x[   12])
+Minimum Column Norm . . . . . .  2.5763e-01 var: (x[    2])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             1.1420e+01             0.0e+00 (f[    6])
+    1     4     0    12 9.5858e+00  4.1e-01    0.0e+00 (f[    2])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     5     2 9.5858e+00           I 0.0e+00 8.2e+00 (f[    2])
+    1     1     6     3 3.5139e+00  1.0e+00 SM 0.0e+00 3.5e+00 (f[    2])
+    2     1     7     4 8.1236e-01  1.0e+00 SO 0.0e+00 8.1e-01 (f[    2])
+    3     1     8     5 9.9860e-02  1.0e+00 SO 0.0e+00 9.6e-02 (f[    2])
+    4     1     9     6 6.4652e-04  1.0e+00 SO 0.0e+00 6.5e-04 (f[    2])
+    5     1    10     7 2.8903e-08  1.0e+00 SO 0.0e+00 2.9e-08 (f[    2])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  4.4657e-08 eqn: (f[    2])
+Inf-Norm of Normal Map. . . . .  2.8877e-08 eqn: (f[    2])
+Inf-Norm of Minimum Map . . . .  2.8877e-08 eqn: (f[    2])
+Inf-Norm of Fischer Function. .  2.8877e-08 eqn: (f[    2])
+Inf-Norm of Grad Fischer Fcn. .  1.0088e-07 eqn: (f[    2])
+Two-Norm of Grad Fischer Fcn. .  1.0112e-07
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7306e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  2.8877e-08 eqn: (f[    2])
+Maximum of Grad F . . . . . . .  4.6417e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 5
+Minor Iterations. . . . 5
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 10
+Gradient Evaluations. . 7
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.451931
+Residual. . . . . . . . 2.890322e-08
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.8800e+00 var: (x[    3])
+Maximum of F. . . . . . . . . .  3.3120e+00 eqn: (f[    4])
+Maximum of Grad F . . . . . . .  4.5277e+00 eqn: (f[    1])
+                                            var: (x[    1])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  5.5173e+00 eqn: (f[   11])
+Minimum Row Norm. . . . . . . .  3.3526e+00 eqn: (f[    3])
+Maximum Column Norm . . . . . .  6.1669e+00 var: (x[   12])
+Minimum Column Norm . . . . . .  2.6540e+00 var: (x[    4])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             7.3906e+00             0.0e+00 (f[    4])
+    1     1     0    12 7.3023e-01  1.0e+00    0.0e+00 (f[    3])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 7.3023e-01           I 0.0e+00 4.0e-01 (f[    3])
+    1     1     3     3 1.7379e-01  1.0e+00 SO 0.0e+00 1.4e-01 (f[    3])
+    2     1     4     4 9.3255e-04  1.0e+00 SO 0.0e+00 8.8e-04 (f[    3])
+    3     1     5     5 4.3365e-08  1.0e+00 SO 0.0e+00 4.3e-08 (f[    3])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  5.0407e-08 eqn: (f[    3])
+Inf-Norm of Normal Map. . . . .  4.3294e-08 eqn: (f[    3])
+Inf-Norm of Minimum Map . . . .  4.3294e-08 eqn: (f[    3])
+Inf-Norm of Fischer Function. .  4.3294e-08 eqn: (f[    3])
+Inf-Norm of Grad Fischer Fcn. .  1.7131e-07 eqn: (f[    3])
+Two-Norm of Grad Fischer Fcn. .  1.7163e-07
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7306e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  4.3294e-08 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  4.6417e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 3
+Minor Iterations. . . . 3
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 5
+Gradient Evaluations. . 5
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.366944
+Residual. . . . . . . . 4.336529e-08
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  3.5081e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  3.7559e+00 eqn: (f[    5])
+Maximum of Grad F . . . . . . .  4.5392e+00 eqn: (f[   12])
+                                            var: (x[   12])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  4.9407e+00 eqn: (f[   12])
+Minimum Row Norm. . . . . . . .  1.3431e+00 eqn: (f[    2])
+Maximum Column Norm . . . . . .  5.7704e+00 var: (x[    9])
+Minimum Column Norm . . . . . .  4.5294e-01 var: (x[    2])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             1.0810e+01             0.0e+00 (f[    5])
+    1     1     2    12 3.9308e+00  1.0e+00    0.0e+00 (f[    1])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 3.9308e+00           I 0.0e+00 3.8e+00 (f[    1])
+    1     1     3     3 0.0000e+00  1.0e+00 SO 0.0e+00 0.0e+00 (f[    1])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Normal Map. . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Minimum Map . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Fischer Function. .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Grad Fischer Fcn. .  0.0000e+00 eqn: (f[    1])
+Two-Norm of Grad Fischer Fcn. .  0.0000e+00
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  7.2323e-02 var: (x[    2])
+Maximum of F. . . . . . . . . .  6.7087e+00 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  5.2382e+00 eqn: (f[    1])
+                                            var: (x[    2])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 1
+Minor Iterations. . . . 22
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 3
+Gradient Evaluations. . 3
+Basis Time. . . . . . . 0.001000
+Total Time. . . . . . . 0.285956
+Residual. . . . . . . . 0.000000e+00
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  2.1229e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  3.4274e+00 eqn: (f[    7])
+Maximum of Grad F . . . . . . .  4.6120e+00 eqn: (f[   12])
+                                            var: (x[   12])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  5.1411e+00 eqn: (f[   12])
+Minimum Row Norm. . . . . . . .  3.1300e+00 eqn: (f[    7])
+Maximum Column Norm . . . . . .  5.4170e+00 var: (x[    1])
+Minimum Column Norm . . . . . .  2.6606e+00 var: (x[    7])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             6.9396e+00             0.0e+00 (f[    7])
+    1     1     0    12 6.5789e-01  1.0e+00    0.0e+00 (f[    7])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 6.5789e-01           I 0.0e+00 4.0e-01 (f[    7])
+    1     1     3     3 5.8776e-01  1.0e+00 SO 0.0e+00 5.0e-01 (f[    8])
+    2     1     4     4 2.8176e-03  1.0e+00 SO 0.0e+00 1.9e-03 (f[    7])
+    3     1     5     5 1.8050e-07  1.0e+00 SO 0.0e+00 1.0e-07 (f[    8])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  9.8226e-08 eqn: (f[    8])
+Inf-Norm of Normal Map. . . . .  1.0303e-07 eqn: (f[    8])
+Inf-Norm of Minimum Map . . . .  1.0303e-07 eqn: (f[    8])
+Inf-Norm of Fischer Function. .  1.0303e-07 eqn: (f[    8])
+Inf-Norm of Grad Fischer Fcn. .  4.5062e-07 eqn: (f[    8])
+Two-Norm of Grad Fischer Fcn. .  7.7769e-07
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7306e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  1.0303e-07 eqn: (f[    8])
+Maximum of Grad F . . . . . . .  4.6417e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 3
+Minor Iterations. . . . 3
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 5
+Gradient Evaluations. . 5
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.367944
+Residual. . . . . . . . 1.804959e-07
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  3.8224e+00 var: (x[   10])
+Maximum of F. . . . . . . . . .  3.7369e+00 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  4.4951e+00 eqn: (f[   11])
+                                            var: (x[   11])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  5.6672e+00 eqn: (f[   11])
+Minimum Row Norm. . . . . . . .  9.7232e-01 eqn: (f[   10])
+Maximum Column Norm . . . . . .  6.1565e+00 var: (x[   12])
+Minimum Column Norm . . . . . .  6.1026e-02 var: (x[   10])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             8.7397e+00             0.0e+00 (f[    3])
+    1     8     0    12 7.9564e+00  2.8e-02    0.0e+00 (f[    3])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     9     2 7.9564e+00           I 0.0e+00 5.3e+00 (f[    3])
+    1     3    10     3 0.0000e+00  1.0e+00 SM 0.0e+00 0.0e+00 (f[    1])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Normal Map. . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Minimum Map . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Fischer Function. .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Grad Fischer Fcn. .  0.0000e+00 eqn: (f[    1])
+Two-Norm of Grad Fischer Fcn. .  0.0000e+00
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.3185e+02 var: (x[   10])
+Maximum of F. . . . . . . . . .  1.0540e+02 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  5.5426e+00 eqn: (f[    1])
+                                            var: (x[    2])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 1
+Minor Iterations. . . . 32
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 10
+Gradient Evaluations. . 3
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.291956
+Residual. . . . . . . . 0.000000e+00
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  2.2775e+00 var: (x[    3])
+Maximum of F. . . . . . . . . .  3.0640e+00 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  4.5118e+00 eqn: (f[    1])
+                                            var: (x[    1])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  5.4255e+00 eqn: (f[   11])
+Minimum Row Norm. . . . . . . .  2.8219e+00 eqn: (f[    3])
+Maximum Column Norm . . . . . .  6.0410e+00 var: (x[    8])
+Minimum Column Norm . . . . . .  2.2368e+00 var: (x[    3])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             8.9627e+00             0.0e+00 (f[    3])
+    1     1     0    12 1.0096e+00  1.0e+00    0.0e+00 (f[    3])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 1.0096e+00           I 0.0e+00 6.4e-01 (f[    3])
+    1     1     3     3 1.1201e-01  1.0e+00 SO 0.0e+00 9.1e-02 (f[    3])
+    2     1     4     4 5.2911e-04  1.0e+00 SO 0.0e+00 5.2e-04 (f[    3])
+    3     1     5     5 1.5181e-08  1.0e+00 SO 0.0e+00 1.5e-08 (f[    3])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  1.7646e-08 eqn: (f[    3])
+Inf-Norm of Normal Map. . . . .  1.5156e-08 eqn: (f[    3])
+Inf-Norm of Minimum Map . . . .  1.5156e-08 eqn: (f[    3])
+Inf-Norm of Fischer Function. .  1.5156e-08 eqn: (f[    3])
+Inf-Norm of Grad Fischer Fcn. .  5.9969e-08 eqn: (f[    3])
+Two-Norm of Grad Fischer Fcn. .  6.0087e-08
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7306e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  1.5156e-08 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  4.6417e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 3
+Minor Iterations. . . . 3
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 5
+Gradient Evaluations. . 5
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.366944
+Residual. . . . . . . . 1.518076e-08
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  2.4872e+00 var: (x[    3])
+Maximum of F. . . . . . . . . .  3.3307e+00 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  4.5319e+00 eqn: (f[   12])
+                                            var: (x[   12])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  4.9614e+00 eqn: (f[   11])
+Minimum Row Norm. . . . . . . .  2.6931e+00 eqn: (f[    3])
+Maximum Column Norm . . . . . .  5.2816e+00 var: (x[    8])
+Minimum Column Norm . . . . . .  1.6982e+00 var: (x[    3])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             7.3023e+00             0.0e+00 (f[    3])
+    1     1     0    12 1.1408e+00  1.0e+00    0.0e+00 (f[   10])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 1.1408e+00           I 0.0e+00 7.2e-01 (f[   10])
+    1     1     3     3 4.1618e+00  1.0e+00 SO 0.0e+00 3.5e+00 (f[    4])
+    2     1     4     4 3.4992e-01  1.0e+00 SO 0.0e+00 2.9e-01 (f[    4])
+    3     1     5     5 4.5234e-03  1.0e+00 SO 0.0e+00 4.3e-03 (f[    4])
+    4     1     6     6 7.7459e-07  1.0e+00 SO 0.0e+00 7.3e-07 (f[    4])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  5.3675e-07 eqn: (f[    4])
+Inf-Norm of Normal Map. . . . .  7.2862e-07 eqn: (f[    4])
+Inf-Norm of Minimum Map . . . .  7.2862e-07 eqn: (f[    4])
+Inf-Norm of Fischer Function. .  7.2862e-07 eqn: (f[    4])
+Inf-Norm of Grad Fischer Fcn. .  3.2397e-06 eqn: (f[    4])
+Two-Norm of Grad Fischer Fcn. .  3.4101e-06
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7306e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  7.2862e-07 eqn: (f[    4])
+Maximum of Grad F . . . . . . .  4.6417e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 4
+Minor Iterations. . . . 4
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 6
+Gradient Evaluations. . 6
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.407938
+Residual. . . . . . . . 7.745903e-07
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  3.5406e+00 var: (x[   10])
+Maximum of F. . . . . . . . . .  3.7658e+00 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  4.4857e+00 eqn: (f[    1])
+                                            var: (x[    1])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  5.3725e+00 eqn: (f[    7])
+Minimum Row Norm. . . . . . . .  1.2966e+00 eqn: (f[   10])
+Maximum Column Norm . . . . . .  6.1506e+00 var: (x[    8])
+Minimum Column Norm . . . . . .  3.6686e-01 var: (x[   10])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             8.3251e+00             0.0e+00 (f[   10])
+    1     1     1    12 4.9952e+00  1.0e+00    0.0e+00 (f[    9])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 4.9952e+00           I 0.0e+00 5.0e+00 (f[    9])
+    1     1     3     3 0.0000e+00  1.0e+00 SO 0.0e+00 0.0e+00 (f[    1])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Normal Map. . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Minimum Map . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Fischer Function. .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Grad Fischer Fcn. .  0.0000e+00 eqn: (f[    1])
+Two-Norm of Grad Fischer Fcn. .  0.0000e+00
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  7.2323e-02 var: (x[    2])
+Maximum of F. . . . . . . . . .  6.7087e+00 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  5.2382e+00 eqn: (f[    1])
+                                            var: (x[    2])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 1
+Minor Iterations. . . . 22
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 3
+Gradient Evaluations. . 3
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.284957
+Residual. . . . . . . . 0.000000e+00
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  2.7195e+00 var: (x[    3])
+Maximum of F. . . . . . . . . .  3.7739e+00 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  4.5732e+00 eqn: (f[    9])
+                                            var: (x[    9])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  5.3647e+00 eqn: (f[   11])
+Minimum Row Norm. . . . . . . .  2.3541e+00 eqn: (f[    3])
+Maximum Column Norm . . . . . .  5.6773e+00 var: (x[   12])
+Minimum Column Norm . . . . . .  1.3608e+00 var: (x[    3])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             7.2578e+00             0.0e+00 (f[    3])
+    1     1     1    12 3.0837e+00  1.0e+00    0.0e+00 (f[    4])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 3.0837e+00           I 0.0e+00 3.0e+00 (f[    4])
+    1     1     3     3 1.7155e-01  1.0e+00 SO 0.0e+00 1.5e-01 (f[    4])
+    2     1     4     4 1.6567e-03  1.0e+00 SO 0.0e+00 1.6e-03 (f[    4])
+    3     1     5     5 8.4003e-08  1.0e+00 SO 0.0e+00 8.1e-08 (f[    4])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  3.1202e-08 eqn: (f[    2])
+Inf-Norm of Normal Map. . . . .  8.1060e-08 eqn: (f[    4])
+Inf-Norm of Minimum Map . . . .  8.1060e-08 eqn: (f[    4])
+Inf-Norm of Fischer Function. .  8.1060e-08 eqn: (f[    4])
+Inf-Norm of Grad Fischer Fcn. .  5.2522e-07 eqn: (f[    3])
+Two-Norm of Grad Fischer Fcn. .  6.5284e-07
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7335e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  3.8227e+00 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  6.5224e+00 eqn: (f[    4])
+                                            var: (x[    3])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 3
+Minor Iterations. . . . 3
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 5
+Gradient Evaluations. . 5
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.367944
+Residual. . . . . . . . 8.400307e-08
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  3.0344e+00 var: (x[   10])
+Maximum of F. . . . . . . . . .  3.2833e+00 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  4.5271e+00 eqn: (f[    8])
+                                            var: (x[    8])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  4.9833e+00 eqn: (f[   12])
+Minimum Row Norm. . . . . . . .  1.8246e+00 eqn: (f[   10])
+Maximum Column Norm . . . . . .  5.8660e+00 var: (x[    1])
+Minimum Column Norm . . . . . .  1.1978e+00 var: (x[   10])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             8.9322e+00             0.0e+00 (f[   10])
+    1     1     0    12 4.8853e+00  1.0e+00    0.0e+00 (f[    9])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 4.8853e+00           I 0.0e+00 4.8e+00 (f[    9])
+    1     1     3     3 0.0000e+00  1.0e+00 SO 0.0e+00 0.0e+00 (f[    1])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Normal Map. . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Minimum Map . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Fischer Function. .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Grad Fischer Fcn. .  0.0000e+00 eqn: (f[    1])
+Two-Norm of Grad Fischer Fcn. .  0.0000e+00
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  7.2323e-02 var: (x[    2])
+Maximum of F. . . . . . . . . .  6.7087e+00 eqn: (f[   10])
+Maximum of Grad F . . . . . . .  5.2382e+00 eqn: (f[    1])
+                                            var: (x[    2])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 1
+Minor Iterations. . . . 57
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 3
+Gradient Evaluations. . 3
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.285956
+Residual. . . . . . . . 0.000000e+00
+... Path complete 
+
+
+************************************************************
+
+************************************************************
+Calling Path ... 
+
+
+Path 5.0.00: Standalone-C Link
+12 row/cols, 144 non-zeros, 100.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 5.0.00 (Thu Nov 18 12:54:01 2010)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  3.4602e+00 var: (x[    5])
+Maximum of F. . . . . . . . . .  4.4186e+00 eqn: (f[    5])
+Maximum of Grad F . . . . . . .  4.3860e+00 eqn: (f[   12])
+                                            var: (x[   12])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  4.7887e+00 eqn: (f[   12])
+Minimum Row Norm. . . . . . . .  1.2389e+00 eqn: (f[    5])
+Maximum Column Norm . . . . . .  6.3077e+00 var: (x[    9])
+Minimum Column Norm . . . . . .  1.2173e-01 var: (x[    5])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             1.0443e+01             0.0e+00 (f[    5])
+    1     1     1    12 8.7753e-01  1.0e+00    0.0e+00 (f[    9])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 8.7753e-01           I 0.0e+00 5.2e-01 (f[    9])
+    1     1     3     3 7.6502e-02  1.0e+00 SO 0.0e+00 7.2e-02 (f[    6])
+    2     1     4     4 6.0912e-05  1.0e+00 SO 0.0e+00 4.9e-05 (f[    6])
+    3     1     5     5 4.6014e-11  1.0e+00 SO 0.0e+00 3.3e-11 (f[    3])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  3.8293e-11 eqn: (f[    3])
+Inf-Norm of Normal Map. . . . .  3.2524e-11 eqn: (f[    3])
+Inf-Norm of Minimum Map . . . .  3.2524e-11 eqn: (f[    3])
+Inf-Norm of Fischer Function. .  3.2524e-11 eqn: (f[    3])
+Inf-Norm of Grad Fischer Fcn. .  1.2481e-10 eqn: (f[    5])
+Two-Norm of Grad Fischer Fcn. .  2.1719e-10
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  1.7448e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  1.6294e+00 eqn: (f[    5])
+Maximum of Grad F . . . . . . .  5.6744e+00 eqn: (f[    6])
+                                            var: (x[    5])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 3
+Minor Iterations. . . . 3
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 5
+Gradient Evaluations. . 5
+Basis Time. . . . . . . 0.000000
+Total Time. . . . . . . 0.367944
+Residual. . . . . . . . 4.601360e-11
+... Path complete 
+
+
+************************************************************
+
+
+Max Coeff of Optimal Solutions and residuals found over 15 starts
+MaxCoeff :   1.44646    1.7306    1.7306   103.055    1.7306    1.7306    1.7306 0.0723231    1.7306   131.849    1.7306    1.7306 0.0723231    1.7335 0.0723231   1.74483    1.7306
+MinCoeff :  0.319902  0.566683  0.566683 0.0159951  0.566683  0.566683  0.566683 0.0159951  0.566683 0.0159951  0.566683  0.566683 0.0159951 0.0515275 0.0159951 0.0471737  0.566683
+Residual : 3.16169e-12 4.13311e-11     83.1853 1.12841e-12 2.89032e-08 4.33653e-08     14.1738 1.80496e-07      106.13 1.51808e-08 7.74591e-07     14.1738     3.82272     14.1738      1.6294
+Creating dir /gpfs/pads/projects/CI-SES000069/data/blp/arm.T1.J12/rep51/ ... done
+Creating dir /gpfs/pads/projects/CI-SES000069/data/blp/arm.T1.J12/rep51/config ... done
+Creating dir /gpfs/pads/projects/CI-SES000069/data/blp/arm.T1.J12/rep51/input ... done
+Creating dir /gpfs/pads/projects/CI-SES000069/data/blp/arm.T1.J12/rep51/output ... done
+
+Warning: resorting data by product then market.
+
+
+Elapsed Computation Time : 7
+
+============================================================
+  Exiting GenData Software
+
+*** ATTENTION! Do not forget to copy quadrature file and
+    solver options to <BaseDir>/<BaseName>.T<t>.J<j>/common
+
+============================================================
+
+----------------------------------------
+Begin PBS Epilogue Tue Jun  7 23:01:02 CDT 2011
+Job ID:		1377331[51].svc.pads.ci.uchicago.edu
+Username:	bss
+Group:		ci-users
+Job Name:	Job.GenData.T1.J12.pbs-51
+Session:	17708
+Limits:		ncpus=1,neednodes=2:ppn=1,nodes=2:ppn=1,size=2,walltime=04:00:00
+Resources:	cput=00:00:06,mem=23328kb,vmem=159104kb,walltime=00:00:09
+Nodes:		c34.pads.ci.uchicago.edu,c07.pads.ci.uchicago.edu
+End PBS Epilogue Tue Jun  7 23:01:02 CDT 2011
+----------------------------------------

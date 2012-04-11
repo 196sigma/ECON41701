@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -l nodes=2:ppn=1,walltime=04:00:00
+#PBS -q short
+#PBS -t 10-99
+
+ix=${PBS_ARRAYID}
+
+# Specify this run's number of products and markets
+T=1
+J=12
+
+###/gpfs/pads/projects/CI-SES000069/sbox/blpcpp/gendata/genData -f /gpfs/pads/projects/CI-SES000069/data/blp/config.gendata/GenDataConfig.${ix}.prop -r
+
+echo ************************************************************
+echo *        Generating Data for T = ${T}, J = ${J}
+echo *        Start : ${ix}
+echo ************************************************************
+
+/gpfs/pads/projects/CI-SES000069/sbox/blpcpp/gendata/genData -f /gpfs/pads/projects/CI-SES000069/sbox/blpcpp/data/synthetic/arm/PADS.ARM.GenData.T${T}.J${J}.prop -r -s ${ix}
